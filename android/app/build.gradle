@@ -1,0 +1,34 @@
+buildscript {
+    ext.kotlin_version = '1.9.24'
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        // تأكد أن إصدار AGP (Android Gradle Plugin) يتوافق مع إعداداتك، 8.3.2 أو 8.2.1 خيارات ممتازة ومستقرة
+        classpath 'com.android.tools.build:gradle:8.3.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // إذا كنت تستخدم الفايربيز، أضف كلاس باث الـ google-services هنا أيضاً:
+        classpath 'com.google.gms:google-services:4.4.1'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.buildDir = "../build"
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(":app")
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
