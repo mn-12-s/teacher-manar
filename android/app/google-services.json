@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1066657295285",
+    "project_id": "mahad-5e879",
+    "storage_bucket": "mahad-5e879.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1066657295285:android:0000000000000000000000",
+        "android_client_info": {
+          "package_name": "com.nooralduha.noor_teacher_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlzFSrs2sBVfAjriPC7RqyzRVT5SDPJpM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1",
+  "__COMMENT__": "هذا ملف مبدئي ليمر البناء. للحصول على إشعارات FCM حقيقية: أنشئ تطبيق Android في Firebase Console بالمعرّف com.nooralduha.noor_teacher_app ونزّل google-services.json الحقيقي واستبدله بهذا الملف. Firestore يعمل بدونه لأننا نهيّئ Firebase ببيانات صريحة وقت التشغيل."
+}
